@@ -1,45 +1,74 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <title>AddressBook</title>
+    <title>Pig Dice</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.4.1.js"></script>
     <script src="js/scripts.js"></script>
   </head>
   <body>
+      <div class="jumbotron">
+        <h1>Pig Dice</h1>
+      </div>
+        <div class="row">
+          <div class="col-sm-4 col-md-6">
+            <form id="dice1">
+                  <p>User1's turn</p>
+                  <button>Let's roll</button>
+                  <div class="container">
+                    <div class="user1ResultDice">
+                      <p>Die:<span id="result1Dice"></span></p>
+                    </div>
+                  </div>
+            </form>
 
-    <div class="container">
-      <div class="user1">
-        <form id="dice1">
-          <p>dice</p>
-          <button>Let's roll</button>
-        </form>
-        <form id="hold1">
-          <p>Hold</p>
-          <button>Let's hold</button>
-        </form>
+
+            <form id="hold1">
+                  <p>Hold</p>
+                  <button>Hold</button>
+
+                  <div class="container">
+                    <div class="user1ResultHold">
+                      <p>Your current score:<span id="result1Hold"></span></p>
+                    </div>
+                  </div>
+            </form>
+
+
+          </div>
+          <div class="col-sm-4 col-md-6">
+            <form id="dice2">
+                  <p>User2's turn</p>
+                  <button>Let's roll</button>
+            </form>
+            <div class="container">
+              <div class="user2ResultDice">
+                <p>Die:<span id="result2Dice"></span></p>
+              </div>
+            </div>
+            <form id="hold2">
+                  <p>Hold</p>
+                  <button>Hold</button>
+                  <div class="container">
+                    <div class="user2ResultHold">
+                      <p>Your current score:<span id="result2Hold"></span></p>
+                    </div>
+                  </div>
+            </form>
+
+        </div>
       </div>
 
-      <div class="user2">
-        <form id="dice2">
-          <p>dice</p>
-          <button>Let's roll</button>
-        </form>
-        <form id="hold2">
-          <p>Hold</p>
-          <button>Let's hold</button>
-        </form>
+      <div class="winner1">
+        <h1>Congratulation! User1 Win!</h1>
+        <h1>Current score is <span id="result1Hold"></span>.</p>
       </div>
-    </div>
 
-    <div class="container">
-      <p id="result1"></p>
-    </div>
-
-    <div class="container">
-      <p id="result2"></p>
-    </div>
-
+      <div class="winner2">
+        <h1>Congratulation! User2 Win!</h1>
+        <h1>Current score is <span id="result2Hold"></span>.</p>
+      </div>
 
   </body>
 </html>
