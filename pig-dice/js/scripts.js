@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
   $("#dice1").submit(function(event){
-    event.preventDefault();
+    event.preventDefault()
 
     var dice = Math.floor(Math.random() * 6) + 1
 
@@ -22,7 +22,7 @@ $(document).ready(function(){
 })
 
    $("#hold1").click(function(event) {
-     event.preventDefault();
+     event.preventDefault()
 
      sum = 0
      for (var i =0; i< dices1.length; i++){
@@ -52,7 +52,7 @@ $(document).ready(function(){
    })
 
    $("#hold2").click(function(event){
-     event.preventDefault();
+     event.preventDefault()
 
      sum = 0
      for (var x=0; x< dices2.length; x++) {
@@ -67,7 +67,7 @@ $(document).ready(function(){
      $("#result2Hold").text(currentScore2)
 
    })
-});
+})
 
 dices1 = []
 dices2 = []
@@ -81,25 +81,25 @@ var user2Score = new Score
 
 function Score() {
   this.dices = []
-  this.currentRound = 0;
+  this.currentRound = 0
   this.score = 0
 }
 
 Score.prototype.addScores = function(dice) {
-  dice.round = this.assignRound();
-  this.dices.push(dice);
+  dice.round = this.assignRound()
+  this.dices.push(dice)
   this.score += dice
 }
 
 Score.prototype.assignRound = function() {
-  this.currentRound += 1;
-  return this.currentRound;
+  this.currentRound += 1
+  return this.currentRound
 }
 
 function Winner(currentScore, currentScore2) {
   if (currentScore > 10) {
-    $(".row").hide();
-    $(".winner1").show();
+    $(".row").hide()
+    $(".winner1").show()
   } else if (currentScore2 > 10){
     console.log('hello')
   }
